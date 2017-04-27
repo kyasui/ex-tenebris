@@ -1,0 +1,22 @@
+{
+  "name": "ncubate",
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "homepage": "https://github.com/google/web-starter-kit",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "app/scripts/vendor/",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "velocity": "^1.4.3",
+    "imagesloaded": "^4.1.1",
+    "classlist": "^2014.12.13",
+    "foreach": "https://github.com/toddmotto/foreach.git#^1.1.0"
+  }
+}

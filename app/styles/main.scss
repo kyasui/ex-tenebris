@@ -50,15 +50,17 @@
 
   width: 100%;
 
-  transition: opacity 0.5s;
+  transition: all 0.5s;
 
   &.scrolled {
     @media screen and (min-width: 420px) {
       opacity: 0.2;
+      transform: scale(0.8) translateZ(0);
     }
 
     @media screen and (min-width: 420px) and (max-height: 500px) {
       opacity: 1.0;
+      transform: scale(1.0) translateZ(0);
     }
   }
 }

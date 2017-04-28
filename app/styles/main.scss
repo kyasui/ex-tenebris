@@ -58,7 +58,7 @@
 
   width: 100%;
 
-  transition: opacity 0.5s;
+  transition: all 0.5s;
 
   &.scrolled {
     @media screen and (min-width: 420px) {

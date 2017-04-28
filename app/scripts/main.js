@@ -42,21 +42,25 @@ var EX = {
       duration: 500,
       easing: 'easeInSine',
       complete: function() {
-        var links = document.querySelectorAll('.js-on-player-load');
-
-        forEach(links, function(element, index) {
-          Velocity(element, {
-            opacity: 1.0,
-            translateY: [5, 0]
-          }, {
-            delay: 200 * index,
-            duration: 250,
-            easing: 'easeInSine'
-          });
-        });
+        EX.ui.player.classList.add('is-loaded');
       }
     });
   });
+
+  setTimeout(function() {
+    // If player hasnt loaded in 2 whole seconds, load it anyway.
+    if (!EX.ui.player.classList.contains('is-loaded')) {
+      Velocity(EX.ui.player, {
+        opacity: 1.0
+      }, {
+        duration: 500,
+        easing: 'easeInSine',
+        complete: function() {
+          EX.ui.player.classList.add('is-loaded');
+        }
+      });
+    }
+  }, 2500);
 
   window.addEventListener('scroll', function() {
     var currentPosition = window.pageYOffset;
@@ -86,7 +90,7 @@ var EX = {
       Velocity(element, {
         opacity: 1.0
       }, {
-        delay: 200 * (index + 1),
+        delay: 250 * (index + 1),
         duration: 750,
         easing: 'easeInSine'
       });

@@ -196,3 +196,44 @@
     }
   }
 }
+
+.share-links {
+  position: absolute;
+  bottom: 50px;
+  left: 20px;
+
+  @media screen and (max-width: 420px) {
+    bottom: auto;
+    top: 40px;
+  }
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+
+  transition: all 0.2s;
+
+  .share-icon {
+    fill: #fff;
+    width: 30px;
+    margin-left: 4px;
+    margin-right: 4px;
+
+    &:hover {
+      fill: #333;
+    }
+  }
+}
+
+.sp-follow-button {
+  position: absolute;
+  bottom: 55px;
+  right: 20px;
+
+  @media screen and (max-width: 420px) {
+    bottom: auto;
+    top: 40px;
+  }
+}

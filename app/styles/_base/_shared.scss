@@ -91,7 +91,7 @@ p {
 	font-style: italic;
 	font-weight: 800;
 
-	transition: all 0.1s;
+	transition: all 0.2s;
 
 	margin-left: 5px;
 	margin-right: 5px;
@@ -112,7 +112,7 @@ p {
 	}
 
 	&:hover {
-		background-color: #000;
+		background-color: #333;
 		color: #fff;
 
 		.icon {
